@@ -1,0 +1,1265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+      FIND ITEM
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link href="../assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <script src="eel.js"></script>
+  </head>
+
+<body class="dark-edition">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="black" data-image="../assets/img/sidebar-2.jpg">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo"><a href="" class="simple-text logo-normal">
+          Diego Flores
+        </a></div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item active  ">
+            <a class="nav-link" href="./dashboard.html">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./user.html">
+              <i class="material-icons">person</i>
+              <p>Super Punch</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./findItem.html">
+              <i class="material-icons">content_paste</i>
+              <p>Find item</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="">
+              <i class="material-icons">library_books</i>
+              <p>Templates</p>
+            </a>
+          </li>
+<!--          <li class="nav-item ">
+            <a class="nav-link" href="./icons.html">
+              <i class="material-icons">bubble_chart</i>
+              <p>Icons</p>
+            </a>
+          </li>-->
+<!--          <li class="nav-item ">
+            <a class="nav-link" href="./map.html">
+              <i class="material-icons">location_ons</i>
+              <p>Maps</p>
+            </a>
+          </li>-->
+<!--          <li class="nav-item ">
+            <a class="nav-link" href="./notifications.html">
+              <i class="material-icons">notifications</i>
+              <p>Notifications</p>
+            </a>
+          </li>-->
+          <!-- <li class="nav-item active-pro ">
+                <a class="nav-link" href="./upgrade.html">
+                    <i class="material-icons">unarchive</i>
+                    <p>Upgrade to PRO</p>
+                </a>
+            </li> -->
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <form class="navbar-form">
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Search...">
+                <button type="submit" class="btn btn-default btn-round btn-just-icon">
+                  <i class="material-icons">search</i>
+                  <div class="ripple-container"></div>
+                </button>
+              </div>
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">
+                  <i class="material-icons">dashboard</i>
+                  <p class="d-lg-none d-md-block">
+                    Stats
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">notifications</i>
+                  <span class="notification"></span>
+                  <p class="d-lg-none d-md-block">
+                    Some Actions
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">
+                  <i class="material-icons">person</i>
+                  <p class="d-lg-none d-md-block">
+                    Account
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-12">
+              <div class="card" >
+                <div class="card-header card-header-tabs card-header-warning">
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                      <span class="nav-tabs-title"></span>
+                      <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li>
+                          <input id="URLBuscar"  class="form-control" type="text" placeholder="SEARCH ITEM">
+                        </li>
+                        <span class="nav-tabs-title"></span>
+                        <li class="nav-item">
+                          <a class="nav-link active" data-toggle="tab" ID="BUS">
+                            <i class="material-icons">search</i> Search
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                        <center><a class="nav-link" id="ItemCopySearched">
+                          <i class="material-icons">content_paste</i>
+                        </a></center>
+                        <center><a class="nav-link" id="ItemDeleteSearched">
+                          <i class="material-icons">delete</i>
+                        </a></center>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body" id="Card1">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="profile">
+                      <table class="table">
+                        <tbody>
+                          <td>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" id="HoldCheked" type="checkbox" value="" Unchecked>
+                                <span class="form-check-sign">
+                                  <span class="check"></span>
+                                </span>
+                              </label>
+                            </div>
+                            <td>Holding</td>
+                          </td>
+                          <td>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" id="StoreCheked" type="checkbox" value="" Unchecked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                            <td>Store details</td>
+                          </td>
+
+                        </tbody>
+                      </table>
+                      <textarea class="CopyToTEXTAREA" id="textArea" rows="10"></textarea>
+                    </div>
+                    <div class="tab-pane" id="messages">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                            <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                            </td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-white btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" title="Remove" class="btn btn-white btn-link btn-sm">
+                                <i class="material-icons">close</i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="">
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                            <td>Sign contract for "What are conference organizers afraid of?"</td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-white btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" title="Remove" class="btn btn-white btn-link btn-sm">
+                                <i class="material-icons">close</i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="tab-pane" id="settings">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="">
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                            <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-white btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" title="Remove" class="btn btn-white btn-link btn-sm">
+                                <i class="material-icons">close</i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                            <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                            </td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-white btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" title="Remove" class="btn btn-white btn-link btn-sm">
+                                <i class="material-icons">close</i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                            <td>Sign contract for "What are conference organizers afraid of?"</td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-white btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" title="Remove" class="btn btn-white btn-link btn-sm">
+                                <i class="material-icons">close</i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">TEMPLATES</h4>
+                  <p class="card-category">Useful templates</p>
+                </div>
+                <div class="card-body table-responsive">
+                  <table class="table table-hover">
+                    <thead class="text-warning">
+                      <center><u><h4 class="card-title" id="SubtitleH4">GREETING AND CLOSING</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">GREETING</h4>
+                            <p class="card-category" id="greetingEng1">
+                              <span class="text-success"></span>
+                              Hi. Thank you for contacting Lowe's. This is Diego W. How may I assist you today?
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">GREETING SPANISH</h4>
+                            <p class="card-category" id="greetingEsp1">
+                              <span class="text-success" ></span>Hola! Gracias por comunicarte con Lowe 's. Mi nombre es Diego W. ¿Cómo puedo ayudarte el día de hoy?
+                              </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">MANDATORY CLOSING</h4>
+                            <p class="card-category" id="closing1">
+                              <span class="text-success" ></span>It has been a pleasure assisting you. Your satisfaction is very important to us. If you need any help in the future don't hesitate to contact us again. 
+                              <br><br>
+                              Thank you for shopping at Lowe's! It's been my pleasure assisting you today. If you have a moment after the conversation, we'd love to hear your thoughts about how we did!
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">MANDATORY CLOSING SPANISH</h4>
+                            <p class="card-category" id="closingEsp1">
+                              <span class="text-success" ></span>¡Gracias por comprar en Lowe's! Ha sido un placer atenderle hoy. Si tiene un momento después de la conversación, ¡nos encantaría escuchar su opinión sobre cómo lo hicimos!
+                              </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--ACKNOWLEDGMENT SECTION-->
+                      <center><u><h4 class="card-title" id="SubtitleH4">ACKNOWLEDGMENT</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">ACKNOWLEDGMENT</h4>
+                            <p class="card-category" id="acknow1">
+                              <span class="text-success" ></span>I’ve read your concern regarding ____ , and I will do my best to help you out as soon as possible.
+                              </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">ACKNOWLEDGMENT 2</h4>
+                            <p class="card-category" id="acknow2">
+                              <span class="text-success" ></span>
+                              I'm really sorry to hear that ___!, and I will do my best to help you out as soon as possible to check into my possibilities to provide You with the best solution posible.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--ASKING FOR INFORMATION SECTION-->
+                        <center><u><h4 class="card-title" id="SubtitleH4">ASKING FOR INFORMATION</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">ZIP CODE AREA</h4>
+                            <p class="card-category" id="askinfo1">
+                              <span class="text-success" ></span>Would You be so kind as to provide me with your <b>zip code</b>, please?
+                              </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">ORDER DETAILS</h4>
+                            <p class="card-category" id="askinfo2">
+                              <span class="text-success" ></span>
+                              Would You be so kind as to provide me with your <b>email address and order number,</b> please?
+                              </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">FINDING ORDER DETAILS</h4>
+                            <p class="card-category" id="askinfo3">
+                              <span class="text-success" ></span>
+                              Would You be so kind as to provide me with your email address and phone number, please?
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">ITEM DETAILS</h4>
+                            <p class="card-category" id="askinfo4">
+                              <span class="text-success" ></span>
+                              Would You be so kind as to provide me with your item number/model and zip code, please?
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">ITEM SPECS</h4>
+                            <p class="card-category" id="askinfo5">
+                              <span class="text-success" ></span>
+                              Is there any specific brand, color, model or feature You are needing for ___?
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">PLACE AN ORDER REQUIRED DATA</h4>
+                            <p class="card-category" id="askinfo6">
+                              <span class="text-success" ></span>
+                              I can gladly place the order for you! To verify this, we will need the following information:<br><br>
+                              - Phone Number<br>
+                              - Email<br>
+                              - Full Name<br>
+                              - Shipping Address<br>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--HOLDING SECTION-->
+                      <center><u><h4 class="card-title" id="SubtitleH4">HOLDING & CHECK UNRESPONSIVE</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">PLACING ON HOLD</h4>
+                            <p class="card-category" id="Phold1">
+                              <span class="text-success" ></span>
+                              Thank you so much. Could you please be so kind as to let me place you on a brief hold while I take a look into this?
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">PLACING ON HOLD 2</h4>
+                            <p class="card-category" id="Phold2">
+                              <span class="text-success" ></span>
+                              I’ll be more than glad to assist you. Would you mind holding for a moment while I check our options available?
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">HOLDING</h4>
+                            <p class="card-category" id="Phold3">
+                              <span class="text-success" ></span>
+                              Thanks for holding! I do apologize about that wait, I was carefully checking the information. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">CHECK & CLOSE WARNING 1</h4>
+                            <p class="card-category" id="warning1">
+                              <span class="text-success" ></span>
+                              I’m sorry, I’m just afraid of automatic disconnection from my system and I need to check if you’re still with me.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">CHECK & CLOSE WARNING 1</h4>
+                            <p class="card-category" id="warning1">
+                              <span class="text-success" ></span>
+                              I’m sorry, I’m just afraid of automatic disconnection from my system and I need to check if you’re still with me.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">CHECK & CLOSE WARNING 2</h4>
+                            <p class="card-category" id="warning2">
+                              <span class="text-success" ></span>
+                              I don't want to put pressure on you. I’m just afraid of automatic disconnection from my system and I need to check if you’re still with me.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">CLOSED UNRESPONSIVE</h4>
+                            <p class="card-category" id="cunresp1">
+                              <span class="text-success" ></span>
+                              I do apologize since we are still not getting a response from you, my system is going to close the chat due to inactivity, however, before that happens I want You to know that We want to work on this issue, kindly contact us back to fully resolve this situation.                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">CLOSED UNRESPONSIVE (ORDER)</h4>
+                            <p class="card-category" id="cunresp2">
+                              <span class="text-success" ></span>
+                              I do apologize for this but unfortunately, I was unable to get any other response from you, and my system will not let me stay in this chat for no longer time. Please if you still need assistance in your order do not hesitate to contact us back through this method.                          </div>
+                        </div>
+                      </div>
+
+                      <!--ORDERS & TRANSFERS SECTION-->
+                      <center><u><h4 class="card-title" id="SubtitleH4">ORDERS & TRANSFERS SECTION</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">TRANSFERING DUE TO ORDER</h4>
+                            <p class="card-category" id="tranorder1">
+                              <span class="text-success" ></span>
+                              I always strive to create a positive customer experience by giving the best resolution, upon checking ___ and due to the limited access and details available, We have a specialize that is better equipped to handle your query to check and confirm the earliest solution to your ___.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">ACCEPT DELAYED ORDER</h4>
+                            <p class="card-category" id="tranorder2">
+                              <span class="text-success" ></span>
+                              In this case, in order to accept the delay, please click on the blue letters that say "View Order #__". Once You do that, You will see the option to accept the delay.<br><br>
+                              I was checking but since I am not authorized, I cannot accept it for You, but please try and let me know if it does work.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--MORE HELP SECTION-->
+                      <center><u><h4 class="card-title" id="SubtitleH4">MORE HELP</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">MORE HELP 1</h4>
+                            <p class="card-category" id="morehelp1">
+                              <span class="text-success" ></span>
+                              I just want to make sure that you won’t worry about anything. Is there anything else I can do for you today?
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">MORE HELP 2</h4>
+                            <p class="card-category" id="morehelp2">
+                              <span class="text-success" ></span>
+                              Thank you for giving me the chance to assist you. Is there anything else I can do for you today?
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--EMPATHY SECTION -->
+                      <center><u><h4 class="card-title" id="SubtitleH4">EMPATHY</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">EMPATHY 1</h4>
+                            <p class="card-category" id="empathy1">
+                              <span class="text-success" ></span>
+                              I acknowledge this is not the resolution you wanted to hear, I always strive to create a positive customer experience by giving the best resolution. As much as I'd love to help, it's out of my hands.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">EMPATHY 2</h4>
+                            <p class="card-category" id="empathy2">
+                              <span class="text-success" ></span>
+                              First of all, I want to apologize for this inconvenience that you are experiencing, since I understand that this order is important for you. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">EMPATHY 3</h4>
+                            <p class="card-category" id="empathy3">
+                              <span class="text-success" ></span>
+                              I sincerely apologize for such inconvenience since I understand how important this is for you and the hassle this might be causing.  
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">EMPATHY 4</h4>
+                            <p class="card-category" id="empathy4">
+                              <span class="text-success" ></span>
+                              I really understand you, since I understand how much you really want this item and how much you have been waiting for it.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">EMPATHY 5</h4>
+                            <p class="card-category" id="empathy5">
+                              <span class="text-success" ></span>
+                              No problem. It’s perfectly understandable why you’re very upset about this situation.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--SELF-SERVICE SECTION-->
+                      <center><u><h4 class="card-title" id="SubtitleH4">SELF-SERVICE</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">PLACE AN ORDER</h4>
+                            <p class="card-category" id="selfs1order">
+                              <span class="text-success" ></span>
+                              Perfect! Thank you for your preference. I can definitely guide you through the steps in order to have your order placed. I will be happy to guide you to place your order and set aside your item
+                              <br><br>
+                              1. Add the item to your cart by clicking on the green button that says “Add to Cart”. Verify that you selected the correct store.
+                              <br><br>
+                              2. Select shipping, delivery, or pick up at the store method.
+                              <br><br>
+                              3. Continue to secure checkout and complete all the information required in the Delivery and Shipping step.
+                              <br><br>
+                              4. Add your payment information or click on the blue button that says "Use this Credit Card". Click the button that says “Submit order”.
+                              <br><br>
+                              5. After this you will get the order confirmation number.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">EMPLOYEE DISCOUNT STEPS</h4>
+                            <p class="card-category" id="selfs2">
+                              <span class="text-success" ></span>
+                              Here are the steps you need to follow in order to apply your Employee Discount:<br><br>
+                              <a href="www.google.com">1. Log into your My Lowes account.</a><br>
+                              2. Click on Profile and Preference.<br>
+                              3. Add Employee Benefits Code.<br>
+                              4. Populate the Benefit Code field with the 13-digit number found on the Employee Identification Card in the Benefit Code field.<br>
+                              5. Click Save.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">MILITARY DISCOUNT STEPS</h4>
+                            <p class="card-category" id="selfs3">
+                              <span class="text-success" ></span>
+                              The 10% discount will be applied automatically in your online orders once you get verified in the online store, please let me provide you with the to steps to complete the process:<br><br>
+                              1. Verify your status as a military service member or spouse through ID.me.<br>
+                              2. Sign in or create a MyLowe's account.<br>
+                              3. Confirm or provide your primary address.<br>
+                              4. Shop online or in-store to get 10% off eligible items every day.<br><br>
+                              Here is the link, CLICK HERE. https://www.lowes.com/military/validation<br>
+                              Once You are verified You will enjoy your 10% military discount.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">USE LOCKERS STEPS</h4>
+                            <p class="card-category" id="selfs4">
+                              1. Go to Lowe’s Pickup Lockers located in the entrance vestibule or near the customer service desk.<br>
+                              2. Scan Barcode.<br>
+                              3. Retrieve Your Order.<br>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">ALTERNATE PICKUP PERSON STEPS</h4>
+                            <p class="card-category" id="selfs5">
+                              Follow these steps to add/alternate a new person to pick up your order:<br><br>
+                              1. Go to Check Order Status - Lowe's.<br>
+                              2. Click on ”Assign Alternate Pickup Person” (It is located in the top of your screen).<br>
+                              3. Introduce the data requested.<br><br>
+                              The new pick up person will also need to bring with his ID and the email confirmation or order number to pick up the order.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">RESCHEDULE ORDER STEPS  </h4>
+                            <p class="card-category" id="selfs6">
+                              Plese follow these steps to reschedule your delivery:<br><br>
+                              We may need to sign out to your account.<br>
+                              1. Go to the order status page.
+                              https://www.lowes.com/mylowes/orders/checkorderstatus<br>
+                              2. Introduce your email address and order number.<br>
+                              3. Locate the blue button “Reschedule Delivery”.<br>
+                              4. Confirm your phone number (if it is required).<br>
+                              5. Finish the process!
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">FILE A BENEFIT CLAIM LPP STEPS</h4>
+                            <p class="card-category" id="selfs7">
+                              Sure! When You purchase one of our extended coverage protection plans You can enjoy the benefits included.<br><br>
+                              In order to request a benefit claim, please follow these steps:<br><br>
+                              1. Go to Lowe's Protection Plans. https://www.lowes.com/l/help/lowes-protection-plan<br>
+                              2. Introduce your protection plan number, or name and email address/phone number as requested.<br>
+                              3. Navigate your dashboard.<br>
+                              4. Find your covered item, and click on “Start a benefit claim”.<br><br>
+                              Benefit types:<br>
+                              -Keep It Running reward.<br>
+                              -Food Loss.<br>
+                              -Cosmetic Parts.<br>
+                              -Repair Quick.<br>
+                              -Payback Reward.<br>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">RETURN ONLINE STEPS</h4>
+                            <p class="card-category" id="selfs8">
+                              By checking the order I can see that the return option is available. You can definitely go ahead and process a return online. Please follow these steps:<br><br>
+                              1. Please go to the order details, click here.<br>
+                              2. Please click on "Start a Return".<br>
+                              3. Select the return reason.<br>
+                              4. Click on "Proceed to return method".<br><br>
+                              A refund/replacement will issued once the order is returned.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">CANCEL ORDER STEPS</h4>
+                            <p class="card-category" id="selfs9">
+                              I must inform You that I am not authorized to cancel the order for You but I can definitely guide You to cancel it.<br><br>
+                              We may need to try logging out of your Lowe's account and try cancelling as a guest. Let's try these steps:<br><br>
+                              1-log out of your account. Don't worry you won't lose our chat!<br>
+                              2- click on this link.<br>
+                              3- enter in your email and order number (If it is required) and let me know if it allows you to cancel.<br><br>
+                              Quick tip: the cancel button will not be blue like the other buttons you see but it is still an active link.<br>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">CURBSIDE PICKUP STEPS</h4>
+                            <p class="card-category" id="selfs10">
+                              You can follow these steps to choose Curbside Pickup:<br><br>
+                              1. Go to Check Order Status - Lowe's<br>
+                              2. Click on the "Check-in" button.<br>
+                              3. Select the type of pickup.<br>
+                              4. Select the type of vehicle, and the color and press the button that says "All set & on The way".<br>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">USE LOWE'S CREDIT CARD STEPS</h4>
+                            <p class="card-category" id="selfs11">
+                              To use the Lowes card you would have to put the complete card number in the credit/debit card box and the last 3 digits at the back of your card as CVV and in the expiration date box enter the since date mentioned on the card and try to complete the payment.<br><br>
+                              Lowe's credit card doesn't have an expiration date on it. Go ahead and enter your card number and the expiration date field will go away. You can then just enter the CVV number and proceed with the order.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">CHECK GIFT CARD BALANCE STEPS</h4>
+                            <p class="card-category" id="selfs12">
+                              In order to check your gift card balance, you can access the following link: Lowe's Gift Cards.<br>
+                              https://www.lowes.com/l/help/gift-card-balance
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">REPLACE LOWE'S CARD STEPS</h4>
+                            <p class="card-category" id="selfs13">
+                              You can definitely replace your lowe's card, follow these steps:<br><br>
+                              1.Sign in to your MyLowe’s account.<br>
+                              2.Click on Profile and Preferences.<br>
+                              3.Look for My Lowe’s Card box and click on “View MyLowe’s Cards.”<br>
+                              4.Three options will appear:<br><br>
+                              For a new card click on “GET NEW CARD.” If it's a replacement card click on “GET A REPLACEMENT CARD” and if the information is correct click on “REPLACE CARD.”
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">OUT OF STOCK ITEM NOTIFY STEPS</h4>
+                            <p class="card-category" id="selfs14">
+                              At this time, I must inform you that this item is out of stock, at this time the system does not display information about it. But do not worry, If you need we can definitely notify you when the item is back.<br><br>
+                              1. Go to this link.<br>
+                              2. Click on "Enter email address".<br>
+                              3. Enter your email address.<br>
+                              4. Click on "Notify me".<br><br>
+                              We will send you an email confirmation with all the information about the item and you will be able to purchase it!
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">PAY BILL ONLINE STEPS</h4>
+                            <p class="card-category" id="selfs15">
+                              Lowe's has been associated with synchrony, and has created a management web system where You can pay, manage, and check your credit card status.<br><br>
+                              1. Please go to this link.<br>
+                              2. Introduce your User ID and Password.<br>
+                              3. Start managing your account.<br><br>
+                              You can also request and create a login account to manage your account, or pay your bill as a guest.<br><br>
+                              If You are experiencing some difficulties to access, or You any doubt or concern, Lowe's has segmented in a single unique team specialized to check your request, inquiry, issue or similar with your credit card. Please contact our credit cards team at __ from 8:30 a.m. – 7:00 p.m. (EST).
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">GET CREDIT CARD ACCOUNT STEPS</h4>
+                            <p class="card-category" id="selfs16">
+                              In order to get your account number You can request it by going to our website account management.<br><br>
+                              1. Go to this link.<br>
+                              2. Click on the floating blue bubble to start a chat.<br>
+                              3.Type “Get account number” in the chat and send it.<br>
+                              4.Click on “Click my Account Number”<br>
+                              5. Introduce the requested information.<br>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--CREDIT CARDS SECTION-->
+                      <center><u><h4 class="card-title" id="SubtitleH4">CREDIT CARD & DISCOUNTS</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">ADVANTAGE DISCOUNT</h4>
+                            <p class="card-category" id="creditnDis1">
+                              Regardless of the value of your item, the 20% discount can only reach 100, but if we apply 5%, your discount will be greater.<br><br>
+                              When you apply, you receive in your email a promo code that you can apply to your purchase. You can choose your item to your cart, choose your shipping/pickup method and when you click on the checkout page, you will see on the right side Add Promo code. There you can enter your promo code in the blank space.<br><br>
+                              The code is located below the barcode. You only need to add the code in your first purchase in the "Add Promo Code", add your code there and our system will apply the discount.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">COUPON CODE, ADJUSTMENT AND OFFERS REQUEST</h4>
+                            <p class="card-category" id="creditnDis2">
+                              In order to keep our everyday low prices, Lowe's does not offer coupon codes, adjustments or special offers generated by the Lowe's associates stated by our policy. I wish I could honor your request regarding this promotion but as much I would love to provide You with it and being from the pre-sales department We are not authorized and the tools in our system do not allow us to offer this type of promotion.<br><br>
+                              However Lowe’s offers some promotions that You can apply to get a lower price.<br><br>
+                              1. 5% off every day and 20% off coupon code by applying for our Lowe's advantage card on eligible items. https://www.lowes.com/l/Credit/lac-tandc<br><br>
+                              2. 10% everyday military discount applicable for in-store and online purchases.
+                              https://www.lowes.com/l/about/honor-our-military<br><br>
+                              3. Lowe’s Lease to Own, Rebates, and financing (6-month, 12-month, 24-month).
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">IN-STORE PRICE MATCH</h4>
+                            <p class="card-category" id="creditnDis3">
+                              Lowe’s always strives to keep everyday low prices by maintaining independence between the prices listed on our website and our local stores. Due to this some local stores can lower the prices for products in low stock, and or to promote products. In different situations managers can decide to make an in-store promotion and lower the price, due to this We cannot make a price adjustment with an item listed in the store with a different price or promotion, but You can keep enjoying the promotions and low prices available on the website.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--CREDITS, REFUND, & CHARGES SECTION-->
+                      <center><u><h4 class="card-title" id="SubtitleH4">CREDITS, REFUND, & CHARGES</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">LOWE'S GIFT CARD REFUND</h4>
+                            <p class="card-category" id="ChargRef1">
+                              Purchases made with a Lowe's Gift Card, refund card, merchandise card or in-store credit will be refunded as in-store credit. Purchases made with a debit card will be refunded as cash or credited back to the debit card, which may take up to 15 days.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">AUTHORIZATION HOLD</h4>
+                            <p class="card-category" id="ChargRef2">
+                              Always when you place an order with Lowes.com we send an Authorization Hold to your bank account to ensure you have the complete money to be charged for the order.<br><br>
+                              This is not a real charge, only a Hold for your money. I'm aware sometimes Financial institutions place this Hold like a pending charge or even a real charge, and this might be the information that you are seeing in your account.<br><br>
+                              Lowe's billing policy https://www.lowes.com/l/help/billing-policy<br><br>
+                              If You continue seeing this charge, I humbly advise You to contact your financial institution to check if this charge is from Lowe's, and after that, You can contact our customer care team.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--CREDITS, REFUND, & CHARGES SECTION-->
+                      <center><u><h4 class="card-title" id="SubtitleH4">INSTALLATIONS</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">INSTALLATION SERVICE FORM</h4>
+                            <p class="card-category" id="installations1">
+                              In order to obtain the installation service, you can fill out the following form with the required information. The installation team will contact you as soon as possible to provide you with much more information, such as the date and time, or costs.<br><br>
+                              In this case, after filling out the form, you will be contacted by our installations team as soon as possible and they will give you information about costs.<br><br>
+                              Here is the link.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">INSTALLATION SERVICE NOT AVAILABLE</h4>
+                            <p class="card-category" id="installations2">
+                              Upon checking for your request, Lowe’s does not offer this installation service at this moment for this item(s), in situations like this, You can purchase the item(s) in lowes.com, in the same way, if You already have it, You can consult with your local contractor to get a service to install and proceed with your project.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">BASIC HOOKUP</h4>
+                            <p class="card-category" id="installations3">
+                              Basic hookup is connecting your new appliance, a service provided by Lowe's directly for appliances that are major to $396, items that qualify for hookup are, refrigerators, electric dryer, washer, electric ranges, required parts are required for the items to qualify for the basic hookup.<br><br>
+                              Usually they connect your appliance to what we call basic hookup and a brief tutorial from your installer on how to use your new appliance.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">HOOKUP & INSTALLATION DIFFERENCE</h4>
+                            <p class="card-category" id="installations4">
+                              Installations are purchased along with your product and are performed by one of our Lowe’s Providers. Hookups are a complimentary service provided by our delivery drivers upon delivery of your appliance.<br><br>
+                              Lowe’s delivery teams complete basic connections for any major appliance, provided necessary the accessories were purchased. To qualify for hookup, the appliance must be less 500 pounds and less than 36 inches wide (ranges), and it cannot have a compressor on top. Gas appliances are excluded from hookup; please contact your local store for assistance with gas appliance services.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--LOWE'S PRO ACCOUNT SECTION-->
+                      <center><u><h4 class="card-title" id="SubtitleH4">LOWE'S PRO ACCOUNT</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">ADD IN-STORE RECEIPT TO PRO ACCOUNT</h4>
+                            <p class="card-category" id="proacc1">
+                              Being a pro customer has some great benefits, lowe’s always strives to improve the services, options and features available, at this moment, being a pro customer the website will not allow You to add an in-store receipt manually to your pro account order history. However, next time, if You make an in-store purchase, You can definitely show the cashier your account number in order to scan it and your purchase will automatically be added to your account.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">PRO ACCOUNT</h4>
+                            <p class="card-category" id="proacc2">
+                              In-Store: qualifying purchases made with a credit card registered to your Pro Business Account will automatically accrue your organization’s spend. If you scan your Pro ID — which is accessible via your Pro Business Account on the mobile app or through mobile<br><br>
+                              Online: qualifying purchases made by your organization while signed into your Pro Business Account will automatically accrue your organization’s annual qualifying spend.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">FREE HAUL-AWAY FOR PRO CUSTOMERS</h4>
+                            <p class="card-category" id="proacc3">
+                              Yes, free haul-away service is available for pro customers, this will be automatically applied by the system. You can use any credit card, as long as you have a business account the system will detect it automatically.                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--PROTECTION PLANS SECTION-->
+                      <center><u><h4 class="card-title" id="SubtitleH4">LOWE'S PROTECTION PLANS</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">PURCHASE A PROTECTION PLAN</h4>
+                            <p class="card-category" id="protect1">
+                              A protection plan is a service contract that guarantees maintenance, repairs or replacements for major household systems at no additional cost. Once the order has been placed Lowe's offers a 30-days time frame to purchase a 3-yr, 4-yr, 5-yr protection plan to order.<br><br>
+                              After the order has been made Lowe’s stores have to process the transaction, You can contact or visit any of your nearest Lowe’s stores to add the protection plan to your order.
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">SCHEDULE A REPAIR PROTECTION PLAN</h4>
+                            <p class="card-category" id="protect2">
+                              In order to better assist You with this, Lowe's has segmented in a single unique team specialized to honor your request, repair/exchange or similar You need.<br><br>
+                              The protection plans team will request You some information to validate it in order to proceed with your request, let me provide You with the contact details. Repairs/warranties, and protection plans 1-888-775-6937 from 8:30 a.m. – 7:00 p.m. (EST).
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">CANCEL A PROTECTION PLAN</h4>
+                            <p class="card-category" id="protect3">
+                              Let us say that you decide to cancel your protection program within the first 30 day of purchasing it. In such cases, you can get 100% back your purchase price, less all labor and payments. However, if you cancel your plan after 30 days of purchase, you will receive a partial refund instead.<br><br>
+                              Lowe’s has no cancellation fees regardless of when your plan is cancelled.
+                            </div>
+                        </div>
+                      </div>
+                      <!--IN-STORE/REFER TO STORE SECTION-->
+                      <center><u><h4 class="card-title" id="SubtitleH4">IN-STORE/REFER TO STORE</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">ONLY IN-STORE ITEM</h4>
+                            <p class="card-category" id="instore1">
+                              I have verified the information for this item and it is not available online right now but please do not worry. In this case my best advice will be to reach your nearest store to verify availability.
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">IN-STORE POLICY</h4>
+                            <p class="card-category" id="instore2">
+                              Once an order is ready for pickup/Ready in locker, please pickup your items within 7 days of it being placed. Any item, which is not picked up within this time, shall be cancelled.<br><br>
+                              To cancel your item(s) before retrieving them from the lockers and request a refund, you may contact the pickup store.<br><br>
+                              You can also return item(s) at the Customer Service desk after retrieving your order from the assigned locker.
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">DELAYED ORDER FROM THE STORE</h4>
+                            <p class="card-category" id="instore3">
+                              I was carefully checking your order information and I can see that the store is currently preparing your order. I am really sorry to know that your order is delayed. As a customer myself I understand how important this order is for you. Currently, due the high demand the store is experiencing and the short staff, store associates are having some difficulties to complete orders as originally expected due to the difficulties they may face while in processing.<br><br>
+                              But please do not worry, I can see that this order is still in process and, in this case, we really will appreciate it if you can be so kind as to please allow while the store has the chance to deliver the order. Your patience will be really appreciated.<br>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">CANCEL READY FOR PICKUP/READY IN LOCKER</h4>
+                            <p class="card-category" id="instore4">
+                              Thanks for holding! I do apologize about that wait, I was carefully checking the information.<br><br>
+                              *ORDER DETAILS*<br><br>
+                              After checking this, I must inform You that I was not able to cancel the order, I was checking but the option has not been shown to me by my system, in this case this is due to the order has been confirmed and it is ready in locker, due to that it will not allow us to cancel it online.<br><br>
+                              In order to cancel the order and get a refund, you may contact the pickup store to make the cancellation.<br><br>
+                              *STORE DETAILS*<br><br>
+                              In the same way, once an order is ready for pickup/Ready in locker, please pickup your items within 7 days of it being placed. Any item, which is not picked up within this time, shall be canceled and the charges will be removed.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-12">
+                      <div class="card card-chart cardTemplate">
+                        <div class="card-body">
+                          <h4 class="card-title">CHANGE FULFILLMENT METHOD</h4>
+                          <p class="card-category" id="instore5">
+                            Upon checking your order, due to some factors such as the current order status and store assigned, our lowe’s system will not allow us to make the change, since the store has already confirmed. Do not worry, in situations I humbly advise You to contact your local store to check if They can honor the change You have requested me.<br><br>
+                            You can also make/request a cancellation, and place a new order with the fulfillment method that reaches your needs.
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-12">
+                      <div class="card card-chart cardTemplate">
+                        <div class="card-body">
+                          <h4 class="card-title">MATCHING COLOR PAINT IN-STORE</h4>
+                          <p class="card-category" id="instore6">
+                            Upon checking for the paint color requested, I must inform You that this color may not be available at the moment on lowes.com, however in situations like this, You can purchase a tintable paint and our store associated can definitely match the specific color You need by going to our paint service desk in your nearest lowe’s store.
+                          </div>
+                      </div>
+                    </div>
+                      <!--ABUSIVE CUSTOMER SECTION-->
+                      <center><u><h4 class="card-title" id="SubtitleH4">ABUSIVE CUSTOMER / PRANK CHATTER</h4></u></center>
+                      <div class="col-xl-4 col-lg-12">
+                        <div class="card card-chart cardTemplate">
+                          <div class="card-body">
+                            <h4 class="card-title">ABUSIVE CUSTOMER 1</h4>
+                            <p class="card-category" id="abusive1">
+                              I do understand that this has been an inconvenience for you, and I am working to resolve ___ I will ask again that you please stop using this type of language.
+                            </div>
+                        </div>
+                      </div>
+                    </thead>
+                  </table><!--Closing table of contents-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+      </footer>
+      <script>
+        const x = new Date().getFullYear();
+        let date = document.getElementById('date');
+        date.innerHTML = '&copy; ' + x + date.innerHTML;
+      </script>
+    </div>
+  </div>
+  <div class="fixed-plugin">
+    <div class="dropdown show-dropdown">
+      <a href="#" data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x"> </i>
+      </a>
+      <ul class="dropdown-menu">
+        <li class="header-title"> Sidebar Filters</li>
+        <li class="adjustments-line">
+          <a href="javascript:void(0)" class="switch-trigger active-color">
+            <div class="badge-colors ml-auto mr-auto">
+              <span class="badge filter badge-purple active" data-color="purple"></span>
+              <span class="badge filter badge-azure" data-color="azure"></span>
+              <span class="badge filter badge-green" data-color="green"></span>
+              <span class="badge filter badge-warning" data-color="orange"></span>
+              <span class="badge filter badge-danger" data-color="danger"></span>
+            </div>
+            <div class="clearfix"></div>
+          </a>
+        </li>
+        <li class="header-title">Images</li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../assets/img/sidebar-1.jpg" alt="">
+          </a>
+        </li>
+        <li class="active">
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../assets/img/sidebar-2.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../assets/img/sidebar-3.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../assets/img/sidebar-4.jpg" alt="">
+          </a>
+        </li>
+        <li class="button-container">
+          <a href="https://www.creative-tim.com/product/material-dashboard-dark" target="_blank" class="btn btn-primary btn-block">Free Download</a>
+        </li>
+        <!-- <li class="header-title">Want more components?</li>
+            <li class="button-container">
+                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
+                  Get the pro version
+                </a>
+            </li> -->
+        <li class="button-container">
+          <a href="https://demos.creative-tim.com/material-dashboard-dark/docs/2.0/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
+            View Documentation
+          </a>
+        </li>
+        <li class="button-container github-star">
+          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard/tree/dark-edition" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+        </li>
+        <li class="header-title">Thank you for 95 shares!</li>
+        <li class="button-container text-center">
+          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
+          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
+          <br>
+          <br>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="https://unpkg.com/default-passive-events"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/material-dashboard.js?v=2.1.0"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+  <script src="../assets/demo/demo.js"></script>
+  <script src="TemplatesCopy.js"></script>
+  <script src="ItemSearch.js"></script>
+  <script src="eel.js"></script>
+</body>
+
+</html>
