@@ -1,19 +1,43 @@
 GreetingEng1 = document.getElementById("greetingEng1");
-greetingEsp1 = document.getElementById("greetingEsp1");
+//greetingEsp1 = document.getElementById("greetingEsp1");
 HoldStatement = document.getElementById("HoldStatement");
 MandClosing = document.getElementById("MandClosing");
 EmpDisc = document.getElementById("EmpDisc");
+
+OrderStatusBtn = document.getElementById("OrderStatusBtn");
+OrderStatusBtn.addEventListener("click", ()=>{
+    SecundaryWindow("https://www.lowes.com/mylowes/orders/checkorderstatus");
+});
+SupunchStatusBtn = document.getElementById("SupunchStatusBtn");
+SupunchStatusBtn.addEventListener("click", ()=>{
+    SecundaryWindow("https://superpunchtms.com/v2/dashboard");
+});
+RemoteDeskBtn = document.getElementById("RemoteDeskBtn");
+RemoteDeskBtn.addEventListener("click", ()=>{
+    SecundaryWindow("https://rdweb.wvd.microsoft.com/arm/webclient/index.html");
+});
+LivepBtn = document.getElementById("LivepBtn");
+LivepBtn.addEventListener("click", ()=>{
+    SecundaryWindow("https://authentication.liveperson.net/login.html");
+});
+
+function SecundaryWindow (URL){
+    //window.open(URL,"ventana1","width=300,height=300,scrollbars=NO")
+    //var myWindow = window.open("", "myWindow", "width=600,height=600","incognito: true");   // Opens a new window
+    //windows.create({"url": URL, "incognito": true});
+    window.open(URL, "_blank", "popup");
+}
 
 GreetingEng1 = document.getElementById("greetingEng1");
 GreetingEng1.addEventListener("click", ()=>{
     clipboard(GreetingEng1, GreetingEng1)
 });
 
-greetingEsp1 = document.getElementById("greetingEsp1");
+/*greetingEsp1 = document.getElementById("greetingEsp1");
 greetingEsp1.addEventListener("click", ()=>{
     clipboard(greetingEsp1, greetingEsp1)
 });
-
+*/
 acknow1 = document.getElementById("acknow1");
 acknow1.addEventListener("click", ()=>{
     clipboard(acknow1, acknow1)
@@ -27,11 +51,15 @@ closing1 = document.getElementById("closing1");
 closing1.addEventListener("click", ()=>{
     clipboard(closing1, closing1)
 });
+closing2 = document.getElementById("closing2");
+closing2.addEventListener("click", ()=>{
+    clipboard(closing2, closing2)
+});
 
-closingEsp1 = document.getElementById("closingEsp1");
+/*closingEsp1 = document.getElementById("closingEsp1");
 closingEsp1.addEventListener("click", ()=>{
     clipboard(closingEsp1, closingEsp1)
-});
+});*/
 //HOLDING & CHECK UNRESPONSIVE
 Phold1 = document.getElementById("Phold1");
 Phold1.addEventListener("click", ()=>{
@@ -107,6 +135,10 @@ askinfo5.addEventListener("click", ()=>{
 askinfo6 = document.getElementById("askinfo6");
 askinfo6.addEventListener("click", ()=>{
     clipboard(askinfo6, askinfo6)
+});
+askinfo7 = document.getElementById("askinfo7");
+askinfo7.addEventListener("click", ()=>{
+    clipboard(askinfo7, askinfo7)
 });
 //EMPATHY SECTION
 empathy1 = document.getElementById("empathy1");
@@ -194,6 +226,14 @@ selfs16 = document.getElementById("selfs16");
 selfs16.addEventListener("click", ()=>{
     clipboard(selfs16, selfs16)
 });
+selfs17 = document.getElementById("selfs17");
+selfs17.addEventListener("click", ()=>{
+    clipboard(selfs17, selfs17)
+});
+selfs18 = document.getElementById("selfs18");
+selfs18.addEventListener("click", ()=>{
+    clipboard(selfs18, selfs18)
+});
 //CREDIT CARDS AND DISCOUNTS SECTION
 creditnDis1 = document.getElementById("creditnDis1");
 creditnDis1.addEventListener("click", ()=>{
@@ -206,6 +246,14 @@ creditnDis2.addEventListener("click", ()=>{
 creditnDis3 = document.getElementById("creditnDis3");
 creditnDis3.addEventListener("click", ()=>{
     clipboard(creditnDis3, creditnDis3)
+});
+creditnDis4 = document.getElementById("creditnDis4");
+creditnDis4.addEventListener("click", ()=>{
+    clipboard(creditnDis4, creditnDis4)
+});
+creditnDis5 = document.getElementById("creditnDis5");
+creditnDis5.addEventListener("click", ()=>{
+    clipboard(creditnDis5, creditnDis5)
 });
 //REFUND AND CHARGES SECTION
 ChargRef1 = document.getElementById("ChargRef1");
@@ -232,6 +280,10 @@ installations3.addEventListener("click", ()=>{
 installations4 = document.getElementById("installations4");
 installations4.addEventListener("click", ()=>{
     clipboard(installations4, installations4)
+});
+installations5 = document.getElementById("installations5");
+installations5.addEventListener("click", ()=>{
+    clipboard(installations5, installations5)
 });
 //LOWE'S PRO ACCOUNT SECTION
 proacc1 = document.getElementById("proacc1");
@@ -288,6 +340,11 @@ instore6.addEventListener("click", ()=>{
 abusive1 = document.getElementById("abusive1");
 abusive1.addEventListener("click", ()=>{
     clipboard(abusive1, abusive1)
+});
+//CUSTOMER CARE REFER SECTION
+custcare1 = document.getElementById("custcare1");
+custcare1.addEventListener("click", ()=>{
+    clipboard(custcare1, custcare1)
 });
 
 
