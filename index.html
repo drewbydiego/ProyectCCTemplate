@@ -24,38 +24,45 @@
 <body class="dark-edition">
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="black" data-image="../assets/img/sidebar-2.jpg">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
       <div class="logo"><a href="" class="simple-text logo-normal">
           Diego Flores
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
+            <a class="nav-link" href="./index.html">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
+            <a class="nav-link" id="SupunchStatusBtn">
               <i class="material-icons">person</i>
               <p>Super Punch</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./findItem.html">
-              <i class="material-icons">content_paste</i>
-              <p>Find item</p>
+            <a class="nav-link" id="RemoteDeskBtn">
+              <i class="material-icons">install_desktop</i>
+              <p>Remote Desktop</p>
             </a>
           </li>
           <li class="nav-item ">
+            <a class="nav-link" id="LivepBtn">
+              <i class="material-icons">chat_bubble</i>
+              <p>Live Engagement</p>
+            </a>
+          </li>
+          <!--li class="nav-item ">
             <a class="nav-link" href="">
               <i class="material-icons">library_books</i>
               <p>Templates</p>
+            </a>
+          </li-->
+          <li class="nav-item " >
+            <a class="nav-link" id="OrderStatusBtn" >
+              <i class="material-icons">schedule</i>
+              <p>Check order status</p>
             </a>
           </li>
 <!--          <li class="nav-item ">
@@ -90,7 +97,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
+            <!--a class="navbar-brand" href="javascript:void(0)">Dashboard</a-->
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -487,10 +494,10 @@
                             <p class="card-category" id="askinfo6">
                               <span class="text-success" ></span>
                               I can gladly place the order for you! To verify this, we will need the following information:<br><br>
-                              - Phone Number.<br>
-                              - Email.<br>
-                              - Full Name.<br>
-                              - Shipping Address.<br>
+                              - Phone Number<br>
+                              - Email<br>
+                              - Full Name<br>
+                              - Shipping Address<br>
                             </p>
                           </div>
                         </div>
@@ -767,7 +774,7 @@
                           <div class="card-body">
                             <h4 class="card-title">RESCHEDULE ORDER STEPS  </h4>
                             <p class="card-category" id="selfs6">
-                              Please follow these steps to reschedule your delivery:<br><br>
+                              Plese follow these steps to reschedule your delivery:<br><br>
                               We may need to sign out to your account.<br>
                               1. Go to the order status page.
                               https://www.lowes.com/mylowes/orders/checkorderstatus<br>
