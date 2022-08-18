@@ -37,7 +37,7 @@ btnBuscar.addEventListener("click", ()=>{
     buscarDatos();
 });
 ItemCopySearched.addEventListener("click", ()=>{
-    alert("Copiado!")
+    //alert("Copiado!")
     ItemReturned.select();
     document.execCommand('copy');
 });
