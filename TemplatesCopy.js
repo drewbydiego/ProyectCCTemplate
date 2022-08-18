@@ -4,6 +4,30 @@ HoldStatement = document.getElementById("HoldStatement");
 MandClosing = document.getElementById("MandClosing");
 EmpDisc = document.getElementById("EmpDisc");
 
+OrderStatusBtn = document.getElementById("OrderStatusBtn");
+OrderStatusBtn.addEventListener("click", ()=>{
+    SecundaryWindow("https://www.lowes.com/mylowes/orders/checkorderstatus");
+});
+SupunchStatusBtn = document.getElementById("SupunchStatusBtn");
+SupunchStatusBtn.addEventListener("click", ()=>{
+    SecundaryWindow("https://superpunchtms.com/v2/dashboard");
+});
+RemoteDeskBtn = document.getElementById("RemoteDeskBtn");
+RemoteDeskBtn.addEventListener("click", ()=>{
+    SecundaryWindow("https://rdweb.wvd.microsoft.com/arm/webclient/index.html");
+});
+LivepBtn = document.getElementById("LivepBtn");
+LivepBtn.addEventListener("click", ()=>{
+    SecundaryWindow("https://authentication.liveperson.net/login.html");
+});
+
+function SecundaryWindow (URL){
+    //window.open(URL,"ventana1","width=300,height=300,scrollbars=NO")
+    //var myWindow = window.open("", "myWindow", "width=600,height=600","incognito: true");   // Opens a new window
+    //windows.create({"url": URL, "incognito": true});
+    window.open(URL, "_blank", "popup");
+}
+
 GreetingEng1 = document.getElementById("greetingEng1");
 GreetingEng1.addEventListener("click", ()=>{
     clipboard(GreetingEng1, GreetingEng1)
