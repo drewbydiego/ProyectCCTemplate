@@ -234,6 +234,26 @@ selfs18 = document.getElementById("selfs18");
 selfs18.addEventListener("click", ()=>{
     clipboard(selfs18, selfs18)
 });
+selfs19 = document.getElementById("selfs19");
+selfs19.addEventListener("click", ()=>{
+    clipboard(selfs19, selfs19)
+});
+selfs20 = document.getElementById("selfs20");
+selfs20.addEventListener("click", ()=>{
+    clipboard(selfs20, selfs20)
+});
+selfs21 = document.getElementById("selfs21");
+selfs21.addEventListener("click", ()=>{
+    clipboard(selfs21, selfs21)
+});
+selfs22 = document.getElementById("selfs22");
+selfs22.addEventListener("click", ()=>{
+    clipboard(selfs22, selfs22)
+});
+selfs23 = document.getElementById("selfs23");
+selfs23.addEventListener("click", ()=>{
+    clipboard(selfs23, selfs23)
+});
 //CREDIT CARDS AND DISCOUNTS SECTION
 creditnDis1 = document.getElementById("creditnDis1");
 creditnDis1.addEventListener("click", ()=>{
@@ -298,6 +318,10 @@ proacc3 = document.getElementById("proacc3");
 proacc3.addEventListener("click", ()=>{
     clipboard(proacc3, proacc3)
 });
+proacc4 = document.getElementById("proacc4");
+proacc4.addEventListener("click", ()=>{
+    clipboard(proacc4, proacc4)
+});
 //PROTECTION PLANS SECTION
 protect1 = document.getElementById("protect1");
 protect1.addEventListener("click", ()=>{
@@ -310,6 +334,18 @@ protect2.addEventListener("click", ()=>{
 protect3 = document.getElementById("protect3");
 protect3.addEventListener("click", ()=>{
     clipboard(protect3, protect3)
+});
+protect4 = document.getElementById("protect4");
+protect4.addEventListener("click", ()=>{
+    clipboard(protect4, protect4)
+});
+protect5 = document.getElementById("protect5");
+protect5.addEventListener("click", ()=>{
+    clipboard(protect5, protect5)
+});
+protect6 = document.getElementById("protect6");
+protect6.addEventListener("click", ()=>{
+    clipboard(protect6, protect6)
 });
 //IN-STORE REFER TO STORE
 instore1 = document.getElementById("instore1");
@@ -335,6 +371,15 @@ instore5.addEventListener("click", ()=>{
 instore6 = document.getElementById("instore6");
 instore6.addEventListener("click", ()=>{
     clipboard(instore6, instore6)
+});
+instore7 = document.getElementById("instore7");
+instore7.addEventListener("click", ()=>{
+    clipboard(instore7, instore7)
+});
+//AVAILABILITY SECTION
+Avail1 = document.getElementById("Avail1");
+Avail1.addEventListener("click", ()=>{
+    clipboard(Avail1, Avail1)
 });
 //ABUSIVE CUSTOMER SECTION
 abusive1 = document.getElementById("abusive1");
