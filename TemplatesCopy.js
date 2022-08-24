@@ -89,7 +89,19 @@ cunresp2 = document.getElementById("cunresp2");
 cunresp2.addEventListener("click", ()=>{
     clipboard(cunresp2, cunresp2)
 });
-
+//REFRESH CONVERSATION SECTION
+Refre1 = document.getElementById("Refre1");
+Refre1.addEventListener("click", ()=>{
+    clipboard(Refre1, Refre1)
+});
+Refre2 = document.getElementById("Refre2");
+Refre2.addEventListener("click", ()=>{
+    clipboard(Refre2, Refre2)
+});
+Refre3 = document.getElementById("Refre3");
+Refre3.addEventListener("click", ()=>{
+    clipboard(Refre3, Refre3)
+});
 
 //ORDERS & TRANSFERS SECTION
 tranorder1 = document.getElementById("tranorder1");
@@ -304,6 +316,10 @@ installations4.addEventListener("click", ()=>{
 installations5 = document.getElementById("installations5");
 installations5.addEventListener("click", ()=>{
     clipboard(installations5, installations5)
+});
+installations6 = document.getElementById("installations6");
+installations6.addEventListener("click", ()=>{
+    clipboard(installations6, installations6)
 });
 //LOWE'S PRO ACCOUNT SECTION
 proacc1 = document.getElementById("proacc1");
