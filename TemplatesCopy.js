@@ -51,6 +51,7 @@ closing1 = document.getElementById("closing1");
 closing1.addEventListener("click", ()=>{
     clipboard(closing1, closing1)
 });
+
 closing2 = document.getElementById("closing2");
 closing2.addEventListener("click", ()=>{
     clipboard(closing2, closing2)
