@@ -51,11 +51,18 @@ closing1 = document.getElementById("closing1");
 closing1.addEventListener("click", ()=>{
     clipboard(closing1, closing1)
 });
-
 closing2 = document.getElementById("closing2");
 closing2.addEventListener("click", ()=>{
     clipboard(closing2, closing2)
 });
+
+closingEsp1 = document.getElementById("closingEsp1");
+closingEsp1.addEventListener("click", ()=>{
+    clipboard(closingEsp1, closingEsp1)
+});
+
+
+
 
 /*closingEsp1 = document.getElementById("closingEsp1");
 closingEsp1.addEventListener("click", ()=>{
@@ -431,3 +438,8 @@ function clipboard(ElementTag, elementID) {
         ElementTag.classList.remove("seleccionado");
     }, 500);
 }
+
+
+
+
+
