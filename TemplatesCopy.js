@@ -1,3 +1,4 @@
+
 GreetingEng1 = document.getElementById("greetingEng1");
 //greetingEsp1 = document.getElementById("greetingEsp1");
 HoldStatement = document.getElementById("HoldStatement");
@@ -418,6 +419,7 @@ custcare1.addEventListener("click", ()=>{
 
 
 
+
 function clipboard(ElementTag, elementID) {
     //Creating the hidden input
     //ItemReturned.value = ItemReturned.value + elementID
@@ -439,7 +441,47 @@ function clipboard(ElementTag, elementID) {
     }, 500);
 }
 
+//CODING THE FUNCTION TO FOCUSE THE SEARCH BAR TO FILTER THE TEMPLATES
+document.addEventListener("keydown", function(event) {
+    // Check for the key combination Ctrl + Shift + F
+    if (event.ctrlKey && event.shiftKey && event.keyCode === 70) {
+      // Give focus to the search input
+    document.getElementById("buscador").focus();
+    }
+});
 
+//CODING THE FILTER - EACH WORD/PHRASE INSERTED IN THE SEARCHING INPUT WILL BE DISPLAYED AND FILTERED HERE
+document.addEventListener("keyup", e=>{
+    if (e.target.matches("#buscador")){
+        if (e.key ==="Escape")e.target.value = ""
+
+        //Removing the card tittle
+        document.querySelectorAll(".card-title").forEach(template =>{
+            template.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                ?template.classList.remove("filtro")
+                :template.classList.add("filtro")
+        })
+        //Removing the text of the card
+        document.querySelectorAll(".col-xl-4").forEach(template =>{
+            template.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                ?template.classList.remove("filtro")
+                :template.classList.add("filtro")
+        })
+    }
+})
+
+refreshTemplates = document.getElementById("refreshTemplates")
+refreshTemplates.addEventListener("click", ()=>{
+        document.getElementById("buscador").value = ""
+        //Removing the card tittle
+        document.querySelectorAll(".col-xl-4").forEach(template =>{
+                template.classList.remove("filtro")
+        })
+        //Removing the text of the card
+        document.querySelectorAll(".card-title").forEach(template =>{
+                template.classList.remove("filtro")
+        })
+    })
 
 
 

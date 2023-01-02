@@ -1,3 +1,10 @@
+/*document.addEventListener("keyup", e=>{
+    //e.target.matches("#buscador")
+    //console.log(e.target.value)
+})
+*/
+
+
 btnBuscar = document.getElementById("BUS");
 ItemReturned = document.getElementById("textArea");
 ItemCopySearched = document.getElementById("ItemCopySearched");
@@ -135,3 +142,5 @@ function clipboard(ElementTag, elementID) {
         ElementTag.classList.remove("seleccionado");
     }, 500);
 }
+
+
