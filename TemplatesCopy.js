@@ -62,13 +62,12 @@ closingEsp1.addEventListener("click", ()=>{
     clipboard(closingEsp1, closingEsp1)
 });
 
+closingEsp2 = document.getElementById("closingEsp2");
+closingEsp2.addEventListener("click", ()=>{
+    clipboard(closingEsp2, closingEsp2)
+});
 
 
-
-/*closingEsp1 = document.getElementById("closingEsp1");
-closingEsp1.addEventListener("click", ()=>{
-    clipboard(closingEsp1, closingEsp1)
-});*/
 //HOLDING & CHECK UNRESPONSIVE
 Phold1 = document.getElementById("Phold1");
 Phold1.addEventListener("click", ()=>{
@@ -415,6 +414,10 @@ abusive1.addEventListener("click", ()=>{
 custcare1 = document.getElementById("custcare1");
 custcare1.addEventListener("click", ()=>{
     clipboard(custcare1, custcare1)
+});
+mapDetailInfo = document.getElementById("mapDetailInfo");
+mapDetailInfo.addEventListener("click", ()=>{
+    clipboard(mapDetailInfo, mapDetailInfo)
 });
 
 

@@ -32,11 +32,9 @@
   }
   .mapdiv :hover{
     fill: #1a2035;
-  
+    cursor: pointer;
   }
-  
+
   .mapdiv path{
-    stroke: rgb(126, 121, 121);
+    stroke: #fff;
   }
-  
-  
