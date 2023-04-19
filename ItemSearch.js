@@ -8,7 +8,6 @@
 btnBuscar = document.getElementById("BUS");
 ItemReturned = document.getElementById("textArea");
 ItemCopySearched = document.getElementById("ItemCopySearched");
-ItemDeleteSearched = document.getElementById("ItemDeleteSearched");
 var URLItem = document.getElementById('URLBuscar')
 
 
@@ -19,13 +18,13 @@ function Loaded(){
     HeightCard.style.height = `${total * 10}vh`
     HeightCard.style.backgroundColor="rgb(32, 41, 64)";
 }
-
+/*
 URLItem.addEventListener('click', ()=>{
     URLItem.select();
 })
-
+*/
 window.onload=Loaded;
-
+/*
 var Holdingchecked = false;
 var HoldCheck = document.getElementById('HoldCheked');
 HoldCheck.addEventListener("change", validaCheckbox, false);
@@ -39,24 +38,16 @@ StoreCheck.addEventListener("change", validaCheckboxSearch, false);
 function validaCheckboxSearch(){
     StoreCheked = StoreCheck.checked;
 }
+*/
+
+/*
+
+FUNCION BUSCAR DATOS CONECTADA CON PYTHON -- DESACTIVADA
 
 btnBuscar.addEventListener("click", ()=>{
     buscarDatos();
 });
-ItemCopySearched.addEventListener("click", ()=>{
-    //alert("Copiado!")
-    ItemReturned.select();
-    document.execCommand('copy');
-});
-ItemDeleteSearched.addEventListener("click", ()=>{
 
-    //alert("Eliminado!")
-    ItemReturned.value = "";
-    ItemReturned.setAttribute("rows", 10)
-
-    HeightCard = document.getElementById("Card1")
-    HeightCard.style.height = `${3}vh`
-});
 
 function buscarDatos(){
     var URLItem = document.getElementById('URLBuscar')
@@ -81,7 +72,7 @@ function callback(resultado,storeIf){
     HeightCard.style.backgroundColor="rgb(32,41,64)";
         HeightCard.style.height = `${total * 20}vh`
 
-}
+}*/
 
 ItemReturned.addEventListener("keyup", e =>{
     //console.log(ItemReturned.getAttribute("rows"))
@@ -128,7 +119,6 @@ function clipboard(ElementTag, elementID) {
 
     const Hiddeninput = document.createElement('textarea')
     Hiddeninput.value = elementID.innerText;
-    console.log(Hiddeninput.value)
     document.body.appendChild(Hiddeninput);
     //Copying the content
     Hiddeninput.select();
@@ -142,5 +132,4 @@ function clipboard(ElementTag, elementID) {
         ElementTag.classList.remove("seleccionado");
     }, 500);
 }
-
 
