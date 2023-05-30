@@ -5747,7 +5747,9 @@ button.close {
   overflow: hidden;
   outline: 0;
 }
-
+#myModal{
+  padding-top: 10vh;
+}
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;
